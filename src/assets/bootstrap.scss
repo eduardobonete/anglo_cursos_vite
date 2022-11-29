@@ -1,0 +1,11 @@
+
+@import '@/assets/calendario.css';
+
+$body-bg: #000;
+$body-color: #111;
+$body-font-family: "Gilroy";
+
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import '../node_modules/bootstrap-vue-3/src/styles/styles.scss';
+@import '@/assets/base.css';

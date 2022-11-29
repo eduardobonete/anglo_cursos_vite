@@ -1,0 +1,12 @@
+{
+	"api_url": "https://api-aplicacoes.cursoanglo.com.br/api/",
+	"api_storage": "https://api-aplicacoes.cursoanglo.com.br/storage/",
+	"app_url": "https://aluno.cursoanglo.com.br/"
+}
+
+
+{
+	"api_url": "http://api.anglobox.local/api/",
+	"api_storage": "http://api.anglobox.local/storage/",
+	"app_url": "http://aluno.local/"
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script type="text/javascript" src="https://platform-static.cdn.mdstrm.com/js/player_api.js"></script> -->
+    <script type="text/javascript" src="http://aluno.local/assets/js/angloplay/ms.js"></script>
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/javascript">
+      var plr = null;
+      var o = null;
+      var duration = 0;
+      function player(embed, starttime=0, obj) {
+        o = obj
+        duration = obj.video.tempo_video;
+        getDuration();
+        var playerOptions = {
+        width: 640, // Width in pixels
+        height: 360, // Height in pixels
+        type: "media", // Video type. Possible values: "media", "live"
+        id: embed, // Video ID,
+        autoplay: starttime > 0, // Enable autoplay. Possible values: true, false
+        startTime: starttime,
+        events: { // Callbacks to be triggered when certain actions are executed by the player. All optional.
+          onPlayerReady: function() { // Optional callback to be triggered as soon as the player has finished loading
+          console.log("Player is ready");
+          },
+          onPlay: function(ob) { // Optional callback to be triggered as soon as the player starts playing
+            //console.log(ob);
+          },
+          onVideoEnd: function() { // Optional callback to be triggered when the video ends playing
+            o.nextVideo();  
+          },
+          onVideoStop: function() { // Optional callback to be triggered when the user stops or pauses the video
+          console.log("User stopped or paused the video");
+          },
+          onVideoError: function() { // Optional callback to be triggered when there's a playback error
+          console.log("There was an error while loading the video");
+          },
+          onTimeUpdate: function(time) { // Optional callback to be triggered when time is updated
+            if(Math.round(time) % 30 == 0) {
+              window.aula.updateTime(Math.round(time));
+            } 
+            if(Math.round(time) == duration - 2) {
+              plr.toggleFullScreen();
+            }
+
+          },
+          onFullscreenChange: function(fullscreen) { // Optional callback to be triggered when fullscreen status change
+            obj.isFullScreen = fullscreen;
+            console.log("Is fullscreen " + fullscreen);
+          }
+        }
+      };
+      function getDuration() {
+        var length = duration.length;
+        var seconds = duration.substring(length-2, length);
+        var minutes = duration.substring(length - 5, 2);
+        duration = parseInt(minutes) * 60 + parseInt(seconds);
+      }
+      plr = new MediastreamPlayer("mdstrm-player", playerOptions);
+      plr.videoPlay();
+      }
+    </script>
+    
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

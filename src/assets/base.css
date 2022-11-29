@@ -1,0 +1,272 @@
+:root {
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --orange-color: #ffd100;
+  --red-color: #ff0000;
+}
+
+
+.form-control {
+  background-color: #FFF !important;
+}
+
+body {
+  background-color: var(--black-color);
+  color: var(--white-color) !important;
+  font-family: "Gilroy" !important;
+}
+
+.nav-link {
+  color: #FFF !important;
+}
+
+
+.btn-anglo {
+  background-color: var(--white-color) !important;
+  height: 38px;
+}
+
+.live a {
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+.live a:hover {
+  color: var(--orange-color);
+}
+
+.navbar-toggler {
+  border: 1px solid var(--white-color);
+}
+
+h1 {
+  color: var(--orange-color);
+  margin: 20px 0;
+}
+
+.box-aovivo {
+  position: relative;
+  z-index: 0;
+}
+
+.info-aovivo {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  padding: 15px;
+  bottom: 0;
+}
+
+.preloader-aovivo {
+  background-color: var(--orange-color);
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  display: block;
+}
+
+.box-auladodia img,
+.box-list-materias img,
+.box-search img {
+  border-radius: 7px !important;
+}
+
+.box-search a,
+.info-aovivo a,
+.box-auladodia a,
+.box-list-materias a {
+  color: var(--white-color) !important;
+  text-decoration: none !important;
+}
+
+.box-search a:hover,
+.info-aovivo a:hover,
+.box-auladodia a:hover,
+.box-list-materias a:hover {
+  color: var(--orange-color) !important;
+  text-decoration: none !important;
+  transition: all 200ms !important;
+}
+
+.box-list-materias {
+  margin: 0;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid var(--orange-color) !important;
+}
+
+.nav-link[aria-selected="true"] {
+  background: transparent !important;
+  border-color: var(--orange-color) var(--orange-color) var(--orange-color) !important;
+  border-bottom-color: var(--black-color) !important;
+  color: var(--orange-color) !important;
+}
+
+.nav-link[aria-selected="false"] {
+  color: var(--white-color) !important;
+}
+
+.revisoes,
+.search {
+  background: var(--orange-color);
+  /* 
+    background-image: url("../images/bgrevisao.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+  */
+}
+
+.search h1 {
+  color: var(--black-color);
+}
+
+.box-revisao {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border-radius: 5px;
+  width: 32% !important;
+  margin: 0 3px;
+}
+
+.box-revisao:hover {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  transition: all 500ms;
+  cursor: pointer;
+}
+
+.box-revisao:hover svg {
+  color: var(--orange-color);
+  transition: all 500ms;
+}
+
+.box-revisao.active {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.box-revisao.active svg {
+  color: var(--orange-color);
+}
+
+.box-revisao i {
+  font-size: 50px;
+}
+
+.box-revisao small {
+  position: relative;
+  top: -15px;
+}
+
+.icon-revision {
+  width: 20% !important;
+  margin-right: 10px;
+}
+
+.info-revision {
+  width: 70% !important;
+}
+
+.nav-link[data-bs-toggle="pill"] {
+  text-align: left;
+}
+
+@media (max-width: 575.98px) {
+  .box-revisao {
+    width: 100%;
+  }
+}
+
+.breadcrumb-item a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+.breadcrumb-item.active {
+  color: var(--orange-color) !important;
+}
+
+.accordion-button .item {
+  background-color: var(--white-color);
+  width: 60px;
+  height: 45px;
+  border-radius: 50%;
+  color: var(--black-color);
+  font-weight: bold;
+  font-size: 25px;
+  left: -20px;
+  position: relative;
+}
+
+.accordion-button div.title {
+  left: -20px;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.accordion-button div.subtitle {
+  display: block;
+  width: 100%;
+}
+
+.accordion-button:not(.collapsed),
+.accordion-button {
+  /* background-image: url("../images/bgmovie.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background: var(--orange-color) !important;
+  color: var(--black-color) !important;
+}
+
+.accordion-button::after {
+  color: var(--white-color) !important;
+  flex-shrink: 0 !important;
+  width: 9px !important;
+  height: 5px !important;
+  margin-left: auto !important;
+  content: "" !important;
+  background-image: url('/src/assets/images/arrow-up.png') !important;
+  background-repeat: no-repeat !important;
+  background-size: 9px !important;
+  transition: transform 0.2s ease-in-out !important;
+}
+
+.accordion-item {
+  background: transparent !important;
+}
+
+.accordion-body a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.accordion-body li {
+  margin: 5px 0;
+}
+
+.accordion-body li.active {
+  color: var(--orange-color);
+}
+
+.accordion-body .active a,
+.accordion-body .active a .badge {
+  color: var(--orange-color);
+  text-decoration: none;
+}
+
+.icons a {
+  margin: 0 10px;
+  color: var(--white-color);
+}
+
+.stars .active {
+  color: var(--orange-color);
+}
+
+.pdf a {
+  color: var(--red-color);
+  margin-right: 5px;
+}
